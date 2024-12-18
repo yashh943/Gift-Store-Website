@@ -1,0 +1,1263 @@
+/* main.css */
+:root {
+    /* Primary color used throughout the site */
+    --primary-color: #ff6b6b;
+    /* Secondary color used in buttons, highlights, etc. */
+    --secondary-color: #4ecdc4;
+    /* Dark color for text and background accents */
+    --dark-color: #2d3436;
+    /* Light color for background or lighter text */
+    --light-color: #f9f9f9;
+    /* Default transition effect for smooth animations */
+    --transition: all 0.3s ease-in-out;
+}
+
+/* Global reset for margins, padding, and box-sizing */
+* {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    box-sizing: border-box; /* Ensures that padding and border are included in width/height calculations */
+}
+
+/* Basic body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sets the font family */
+    line-height: 1.6; /* Improves readability by increasing line height */
+    color: var(--dark-color); /* Sets text color to the dark color defined in :root */
+}
+
+/* Header Styles */
+.header {
+    position: fixed; /* Fixes the header at the top of the page */
+    width: 100%; /* Ensures the header spans the full width of the page */
+    top: 0; /* Positions the header at the top */
+    background: rgba(255, 255, 255, 0.95); /* Sets a semi-transparent white background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow under the header */
+    backdrop-filter: blur(10px); /* Applies a blur effect to the background behind the header */
+    z-index: 1000; /* Ensures the header stays on top of other content */
+}
+
+/* Navbar container with space between logo and navigation links */
+.navbar {
+    display: flex; /* Uses Flexbox for layout */
+    justify-content: space-between; /* Positions items at the ends of the navbar */
+    align-items: center; /* Vertically centers items in the navbar */
+    padding: 1rem 5%; /* Adds padding around the navbar */
+    max-width: 1400px; /* Limits the maximum width of the navbar */
+    margin: 0 auto; /* Centers the navbar horizontally */
+    height: 100px; /* Sets the height of the navbar */
+}
+
+/* Logo container with gap between logo and text */
+.logo{
+    width: 100px; /* Sets the width of the logo */
+    height: 100px; /* Sets the height of the logo */
+    display: flex; /* Uses Flexbox to align items */
+    gap: 20px; /* Adds space between logo image and text */
+}
+
+/* Logo image styling */
+.logo img{
+    width: 100px; /* Sets a fixed width for the logo image */
+}
+
+/* Logo text styling */
+.logo h1 {
+    color: var(--primary-color); /* Sets the logo text color to the primary color */
+    margin-top: 30px; /* Adds top margin for spacing */
+    font-size: 2rem; /* Sets the font size for the logo text */
+    font-weight: 700; /* Makes the logo text bold */
+}
+
+/* Styling for navigation links */
+.nav-links a {
+    text-decoration: none; /* Removes underline from links */
+    color: var(--dark-color); /* Sets the color of the links to dark */
+    margin: 0 1.5rem; /* Adds horizontal spacing between links */
+    font-weight: 500; /* Sets the font weight for the links */
+    position: relative; /* Required for positioning the pseudo-element */
+    transition: var(--transition); /* Smooth transition for hover effect */
+}
+
+/* Underline effect for navigation links */
+.nav-links a::after {
+    content: ''; /* Generates an empty pseudo-element for the underline */
+    position: absolute; /* Positions the underline element */
+    bottom: -5px; /* Positions the underline 5px below the text */
+    left: 0; /* Aligns the underline to the left */
+    width: 0; /* Starts with no width (hidden) */
+    height: 2px; /* Sets the height of the underline */
+    background: var(--primary-color); /* Underline color is the primary color */
+    transition: var(--transition); /* Smooth transition for expanding underline */
+}
+
+/* Hover effect to show the underline on navigation links */
+.nav-links a:hover::after {
+    width: 100%; /* Expands the underline to full width on hover */
+}
+
+/* Styling for icons in the navbar */
+.nav-icons a {
+    color: var(--dark-color); /* Sets icon color to dark */
+    margin-left: 1.5rem; /* Adds space between icons */
+    font-size: 1.2rem; /* Sets font size for the icons */
+    transition: var(--transition); /* Smooth transition for hover effect */
+}
+
+/* Hover effect for icons */
+.nav-icons a:hover {
+    color: var(--primary-color); /* Changes icon color to primary color on hover */
+}
+
+/* Hero Section Styles */
+.hero {
+    height: 100vh; /* Makes the hero section take up the full viewport height */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Creates a dark gradient overlay */
+                url('../images/hero-bg.jpg'); /* Sets the background image for the hero section */
+    background-size: cover; /* Ensures the background image covers the entire section */
+    background-position: center; /* Centers the background image */
+    display: flex; /* Uses Flexbox for centering content */
+    align-items: center; /* Vertically centers content */
+    justify-content: center; /* Horizontally centers content */
+    text-align: center; /* Centers text inside the hero section */
+    color: white; /* Sets the text color to white */
+}
+
+/* Hero Section Content */
+.hero-content {
+    max-width: 800px; /* Limits the width of the hero content to 800px */
+    padding: 2rem; /* Adds padding around the content */
+}
+
+/* Hero heading styling */
+.hero-content h1 {
+    font-size: 4rem; /* Large font size for the heading */
+    margin-bottom: 1rem; /* Adds space below the heading */
+    animation: fadeInDown 1s ease-out; /* Animates the heading with a "fadeInDown" effect */
+}
+
+/* Hero paragraph styling */
+.hero-content p {
+    font-size: 1.5rem; /* Medium font size for the paragraph */
+    margin-bottom: 2rem; /* Adds space below the paragraph */
+    animation: fadeInUp 1s ease-out; /* Animates the paragraph with a "fadeInUp" effect */
+}
+
+/* Call-to-Action Button (CTA) Styling */
+.cta-button {
+    display: inline-block; /* Makes the button behave like an inline element, but with block-level properties */
+    padding: 1rem 2.5rem; /* Adds padding around the button */
+    background: var(--primary-color); /* Background color is set to the primary color */
+    color: white; /* Text color is white */
+    text-decoration: none; /* Removes underline from the link */
+    border-radius: 50px; /* Rounds the corners of the button */
+    transition: var(--transition); /* Smooth transition for any changes (e.g., hover effects) */
+    animation: fadeIn 1.5s ease-out; /* Animates the button with a fade-in effect */
+}
+
+/* Hover effect for the CTA button */
+.cta-button:hover {
+    background: darken(var(--primary-color), 10%); /* Darkens the primary color by 10% on hover */
+    transform: translateY(-3px); /* Moves the button up slightly */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow to the button for a lifting effect */
+}
+
+/* Featured Categories Section Styling */
+.featured-categories {
+    padding: 5rem 5%; /* Adds padding around the entire section */
+    background: var(--light-color); /* Sets the background to the light color */
+}
+
+/* Category Grid Layout */
+.category-grid {
+    display: grid; /* Uses CSS Grid to layout the categories */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Creates responsive columns that automatically fit and scale */
+    gap: 2rem; /* Adds space between each category card */
+    margin-top: 2rem; /* Adds margin to the top of the grid */
+}
+
+/* Individual Category Card Styling */
+.category-card {
+    position: relative; /* Required for positioning child elements like the title */
+    overflow: hidden; /* Hides anything that overflows the card container (e.g., images when they scale) */
+    border-radius: 15px; /* Rounds the corners of the category card */
+    transition: var(--transition); /* Smooth transition effect for hover effects */
+}
+
+/* Category Card Image Styling */
+.category-card img {
+    width: 100%; /* Ensures the image takes up the full width of the card */
+    height: 300px; /* Sets the image height */
+    object-fit: cover; /* Ensures the image covers the area of the container without distortion */
+    transition: var(--transition); /* Smooth transition for hover effects */
+}
+
+/* Category Card Title Styling */
+.category-card h3 {
+    position: absolute; /* Positions the title absolutely inside the card */
+    bottom: 0; /* Aligns the title at the bottom */
+    left: 0; /* Aligns the title to the left */
+    right: 0; /* Stretches the title to the right */
+    padding: 1rem; /* Adds padding around the title */
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7)); /* Creates a gradient background for the title */
+    color: rgb(255, 255, 255); /* Sets the title text color to white */
+    margin: 0; /* Removes any default margin */
+}
+
+/* Category Card Link Styling */
+.category-card a {
+    color: rgb(255, 255, 255); /* Sets the link color inside the card to white */
+}
+
+/* Hover Effect for Category Image */
+.category-card:hover img {
+    transform: scale(1.1); /* Slightly zooms in the image on hover */
+}
+
+/* Product Slider Styles */
+.product-slider-container {
+    display: flex; /* Uses Flexbox to arrange the product slider items */
+    justify-content: space-evenly; /* Distributes the product items evenly */
+    position: relative; /* Allows for absolute positioning of elements inside */
+    max-width: 1200px; /* Limits the max width of the product slider container */
+    margin: 2rem auto; /* Centers the container horizontally with top/bottom margin */
+    padding: 0 40px; /* Adds padding to the sides of the container */
+}
+
+/* Product Slider Styling */
+.product-slider {
+    display: flex; /* Uses Flexbox to arrange the product cards in a row */
+    overflow-x: hidden; /* Hides overflow on the horizontal axis */
+    scroll-behavior: smooth; /* Adds smooth scrolling when navigating */
+    gap: 2rem; /* Adds space between each product card */
+    padding: 1rem 0; /* Adds padding on top and bottom of the product slider */
+}
+
+/* Product Card Styling */
+.product-card {
+    min-width: 280px; /* Sets the minimum width for each product card */
+    background: white; /* Sets the background of the card to white */
+    border-radius: 15px; /* Rounds the corners of the product card */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Adds shadow to create a "lifted" effect */
+    transition: transform 0.3s ease; /* Smooth transition for the transform property */
+    position: relative; /* Allows for absolute positioning of elements inside the card */
+    overflow: hidden; /* Hides overflow content (e.g., zoomed images) */
+}
+
+/* Hover effect for the product card */
+.product-card:hover {
+    transform: translateY(-5px); /* Moves the product card up when hovered */
+}
+
+/* Product Badge Styling (e.g., "New" or "Sale" labels) */
+.product-badge {
+    position: absolute; /* Positions the badge absolutely within the card */
+    top: 10px; /* Positions the badge 10px from the top */
+    right: 10px; /* Positions the badge 10px from the right */
+    background: var(--primary-color); /* Sets the badge background color to the primary color */
+    color: white; /* Sets the text color to white */
+    padding: 0.5rem 1rem; /* Adds padding inside the badge */
+    border-radius: 20px; /* Rounds the corners of the badge */
+    font-size: 0.8rem; /* Sets the font size of the badge text */
+    z-index: 1; /* Ensures the badge is above other content */
+}
+
+/* Product Image Styling */
+.product-image {
+    position: relative; /* Required for positioning child elements like overlays */
+    height: 200px; /* Sets a fixed height for the product image */
+    overflow: hidden; /* Hides any overflow (e.g., zoomed-in image) */
+}
+
+/* Product Image */
+.product-image img {
+    width: 100%; /* Makes the image take up the full width of the product card */
+    height: 100%; /* Makes the image take up the full height of the product card */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+/* Product Overlay (e.g., quick view) */
+.product-overlay {
+    position: absolute; /* Positions the overlay inside the image container */
+    top: 0; /* Aligns the overlay to the top */
+    left: 0; /* Aligns the overlay to the left */
+    width: 100%; /* Makes the overlay take up the full width */
+    height: 100%; /* Makes the overlay take up the full height */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex; /* Uses Flexbox to center content inside the overlay */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    opacity: 0; /* Initially hides the overlay */
+    transition: opacity 0.3s ease; /* Smooth transition for fading in the overlay */
+}
+
+/* Display the overlay on hover */
+.product-card:hover .product-overlay {
+    opacity: 1; /* Makes the overlay visible on hover */
+}
+
+/* Quick View Button Styling */
+.quick-view-btn {
+    background: white; /* Sets the button background to white */
+    color: var(--dark-color); /* Sets the button text color to dark */
+    border: none; /* Removes the default border */
+    padding: 0.8rem 1.5rem; /* Adds padding around the button */
+    border-radius: 25px; /* Rounds the corners of the button */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    transform: translateY(20px); /* Initially positions the button 20px below */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the quick view button */
+.product-card:hover .quick-view-btn {
+    transform: translateY(0);
+}
+
+/* Product Info Section (e.g., description and price) */
+.product-info {
+    padding: 1.5rem; /* Adds padding around the product info */
+    text-align: center; /* Centers the text inside the info section */
+}
+
+/* Product Info Heading (product name or title) */
+.product-info h3 {
+    font-size: 1.1rem; /* Sets the font size for the heading */
+    margin-bottom: 0.5rem; /* Adds space below the heading */
+}
+
+/* Product Rating (e.g., stars or review icons) */
+.product-rating {
+    color: #ffd700; /* Sets the color of the rating (gold color for stars) */
+    margin-bottom: 0.5rem; /* Adds space below the rating */
+}
+
+/* Product Price Styling */
+.product-price {
+    font-size: 1.2rem; /* Sets the font size of the price */
+    font-weight: bold; /* Makes the price text bold */
+    color: var(--primary-color); /* Sets the price color to the primary color */
+    margin-bottom: 1rem; /* Adds space below the price */
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+    background: var(--primary-color); /* Sets the button background to the primary color */
+    color: white; /* Makes the button text white */
+    border: none; /* Removes the default border */
+    padding: 0.8rem 1.5rem; /* Adds padding inside the button */
+    border-radius: 25px; /* Rounds the corners of the button */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    transition: all 0.3s ease; /* Adds a smooth transition effect for all changes */
+    width: 100%; /* Makes the button fill the width of its container */
+}
+
+/* Hover effect for the Add to Cart button */
+.add-to-cart:hover {
+    background: darken(var(--primary-color), 10%); /* Darkens the background on hover */
+    transform: translateY(-2px); /* Moves the button up slightly on hover */
+}
+
+/* Slider Button (used for product sliders) */
+.slider-btn {
+    position: absolute; /* Positions the button absolutely inside the container */
+    top: 50%; /* Vertically centers the button */
+    transform: translateY(-50%); /* Adjusts the button's position to be perfectly centered */
+    background: white; /* Sets the button background to white */
+    border: none; /* Removes the default border */
+    width: 40px; /* Sets the width of the button */
+    height: 40px; /* Sets the height of the button */
+    border-radius: 50%; /* Makes the button round */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a small shadow around the button */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    display: flex; /* Uses Flexbox to center the icon inside the button */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    transition: all 0.3s ease; /* Adds a smooth transition effect */
+    z-index: 2; /* Ensures the button is above other content */
+}
+
+/* Previous button position */
+.prev-btn {
+    left: 0; /* Positions the previous button on the left */
+}
+
+/* Next button position */
+.next-btn {
+    right: 0; /* Positions the next button on the right */
+}
+
+/* Hover effect for the slider button */
+.slider-btn:hover {
+    background: var(--primary-color); /* Changes the background to the primary color on hover */
+    color: white; /* Changes the icon color to white on hover */
+}
+
+/* Main content section padding */
+main {
+    padding: 20px; /* Adds padding inside the main container */
+}
+
+/* Section margin */
+section {
+    margin-bottom: 40px; /* Adds space below each section */
+}
+
+/* Product Grid Layout */
+.product-grid {
+    display: flex; /* Uses Flexbox to arrange the product items */
+    flex-wrap: wrap; /* Allows the items to wrap into new rows */
+    justify-content: space-between; /* Distributes the items evenly with space between them */
+    gap: 20px; /* Adds space between each product item */
+}
+
+/* Individual Product Item Styling */
+.product-item {
+    border: 1px solid #ff6b6b; /* Adds a red border around the product item */
+    border-radius: 5px; /* Rounds the corners of the product item */
+    padding: 15px; /* Adds padding inside the product item */
+    width: calc(33.33% - 20px); /* Sets the width of each product item to 33.33% of the container width, minus 20px for spacing */
+    text-align: center; /* Centers the text inside the product item */
+    display: flex; /* Uses Flexbox to align children vertically */
+    flex-direction: column; /* Stacks the product content vertically */
+    height: 400px; /* Sets a fixed height for each product item */
+    transition: all 0.5s ease-in-out; /* Adds a smooth transition for any changes, slowed down */
+    position: relative; /* Positions elements inside the product item relative to this container */
+    overflow: hidden; /* Hides any overflow content, like images scaling out of bounds */
+}
+
+/* Hover effect for the product item */
+.product-item:hover {
+    transform: translateY(-5px); /* Moves the product item up slightly */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Adds a shadow to the product item for a lifted effect */
+}
+
+/* Product Item Image Styling */
+.product-item img {
+    width: 100%; /* Makes the image take up the full width of the container */
+    height: 250px; /* Sets the height of the product image */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    object-position: center; /* Centers the image within the container */
+    margin-bottom: 10px; /* Adds space below the image */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for scaling the image */
+}
+
+/* Hover effect for the product image */
+.product-item:hover img {
+    transform: scale(1.05); /* Slightly zooms in the image on hover */
+}
+
+/* Product Item Title Styling */
+.product-item h3 {
+    font-size: 18px; /* Sets the font size for the product title */
+    margin-bottom: 10px; /* Adds space below the title */
+    flex-grow: 1; /* Allows the title to take available space and push other content down */
+    transition: color 0.5s ease-in-out; /* Smooth transition for color changes */
+}
+
+/* Hover effect for the product title */
+.product-item:hover h3 {
+    color: #ff6b6b; /* Changes the color of the title to the primary color on hover */
+}
+
+/* Product Item Description Styling */
+.product-item p {
+    font-size: 16px; /* Sets the font size for the product description */
+    margin-bottom: 10px; /* Adds space below the description */
+    transition: color 0.5s ease-in-out; /* Smooth transition for color changes */
+}
+
+/* Hover effect for the product description */
+.product-item:hover p {
+    color: #ff6b6b; /* Changes the color of the description to the primary color on hover */
+}
+
+
+/* Product Item Button (e.g., Add to Cart) Styling */
+.product-item button {
+    background-color: #28a745; /* Sets the background color of the button to a green shade */
+    color: white; /* Sets the text color of the button to white */
+    border: none; /* Removes the default border of the button */
+    padding: 10px 15px; /* Adds padding around the button text */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    width: calc(100% + 30px); /* Extends the button width to fit the full width of the product box, compensating for padding */
+    margin-top: auto; /* Pushes the button to the bottom of the container (flexbox layout) */
+    margin-left: -15px; /* Moves the button left to center it, compensating for the extended width */
+    margin-bottom: -15px; /* Ensures the button fits within the box and avoids extra space */
+    transition: all 0.5s ease-in-out; /* Adds a smooth transition effect for all properties */
+    position: relative; /* Allows for absolute positioning of the pseudo-element */
+    z-index: 1; /* Ensures the button stays above other elements */
+    overflow: hidden; /* Hides any overflow content, specifically used for the button’s hover effect */
+}
+
+/* Button Hover Effect (with Pseudo-element) */
+.product-item button::before {
+    content: ''; /* Creates an empty pseudo-element */
+    position: absolute; /* Positions it absolutely within the button */
+    top: 0; /* Aligns it to the top of the button */
+    left: -100%; /* Initially positions the background color off-screen (to the left) */
+    width: 100%; /* Makes the pseudo-element as wide as the button */
+    height: 100%; /* Makes the pseudo-element as tall as the button */
+    background-color: #218838; /* Sets the background color of the hover effect (a darker green) */
+    transition: all 0.5s ease-in-out; /* Adds a smooth transition effect */
+    z-index: -1; /* Places the pseudo-element behind the button content */
+}
+
+/* Hover effect for the button (when hovered, the background appears) */
+.product-item button:hover::before {
+    left: 0; /* Moves the pseudo-element from left to right, creating the hover effect */
+}
+
+/* Hover effect for the button text */
+.product-item button:hover {
+    color: white; /* Ensures the text stays white on hover (though it's already white) */
+}
+
+/* Animation for new products - Slide-in effect */
+@keyframes slideIn {
+    from {
+        opacity: 0; /* Starts the animation with the element being transparent */
+        transform: translateX(50px); /* Starts the element 50px to the right of its final position */
+    }
+    to {
+        opacity: 1; /* Makes the element fully visible */
+        transform: translateX(0); /* Moves the element to its original position */
+    }
+}
+
+.product-card {
+    animation: slideIn 0.5s ease-out; /* Applies the slide-in animation to the product card */
+}
+
+/* Fade-in-down animation (used for various elements) */
+@keyframes fadeInDown {
+    from {
+        opacity: 0; /* Starts the element transparent */
+        transform: translateY(-20px); /* Starts the element 20px above its final position */
+    }
+    to {
+        opacity: 1; /* Makes the element fully visible */
+        transform: translateY(0); /* Moves the element to its final position */
+    }
+}
+
+/* Fade-in-up animation (used for various elements) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0; /* Starts the element transparent */
+        transform: translateY(20px); /* Starts the element 20px below its final position */
+    }
+    to {
+        opacity: 1; /* Makes the element fully visible */
+        transform: translateY(0); /* Moves the element to its final position */
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Starts the element transparent */
+    }
+    to {
+        opacity: 1; /* Makes the element fully visible */
+    }
+}
+
+/* Footer Styles */
+.footer {
+    background: var(--dark-color); /* Sets the background color of the footer to the dark color */
+    color: white; /* Makes the text color in the footer white */
+    padding: 4rem 5%; /* Adds padding around the footer content */
+}
+
+/* Footer Content Layout */
+.footer-content {
+    display: grid; /* Uses a grid layout for the footer content */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Creates responsive columns that adapt based on screen size */
+    gap: 2rem; /* Adds space between each column */
+    max-width: 1400px; /* Sets a maximum width for the footer content */
+    margin: 0 auto; /* Centers the footer content horizontally */
+}
+
+/* Footer Section Heading */
+.footer-section h3 {
+    color: var(--primary-color); /* Sets the color of the section heading to the primary color */
+    margin-bottom: 1rem; /* Adds space below the section heading */
+}
+
+/* Footer Section List Styling */
+.footer-section ul {
+    list-style: none; /* Removes the default list styling */
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem; /* Adds space between each list item */
+}
+
+/* Footer Section Links Styling */
+.footer-section a {
+    color: white; /* Sets the link color to white */
+    text-decoration: none; /* Removes underline from the links */
+    transition: var(--transition); /* Adds a smooth transition effect for all link changes */
+}
+
+/* Hover effect for footer links */
+.footer-section a:hover {
+    color: var(--primary-color); /* Changes the link color to the primary color on hover */
+}
+
+/* Responsive Design for Smaller Screens (max-width 768px) */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hides the navigation links on smaller screens (typically mobile devices) */
+    }
+}
+
+   /* Hero Section Content (Heading and Paragraph) */
+.hero-content h1 {
+    font-size: 2.5rem; /* Sets the font size for the main heading to 2.5rem for larger text */
+}
+
+.hero-content p {
+    font-size: 1.2rem; /* Sets the font size for the paragraph to 1.2rem, slightly larger than the body text */
+}
+
+/* Container for Forms */
+.container {
+    max-width: 800px; /* Limits the width of the container to 800px */
+    margin-top: 140px; /* Adds 140px of space at the top, useful for spacing below a fixed header */
+    margin-bottom: 50px; /* Adds 50px of space at the bottom */
+    margin-left: auto; /* Centers the container horizontally (margin-left set to auto) */
+    margin-right: auto; /* Centers the container horizontally (margin-right set to auto) */
+    padding: 30px; /* Adds padding around the inside content of the container */
+    background: #ffffff; /* Sets a white background for the container */
+    border-radius: 20px; /* Rounds the corners of the container with a 20px radius */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Adds a subtle box shadow for a soft 3D effect */
+    display: flex; /* Makes the container a flexbox container */
+    flex-direction: column; /* Stacks the content inside the container vertically (in a column) */
+}
+
+/* Heading Styling for the Form */
+h1 {
+    color: #ff6b6b; /* Sets the color of the heading to a soft red (#ff6b6b) */
+    margin-bottom: 20px; /* Adds 20px of space below the heading */
+    text-align: center; /* Centers the heading text horizontally */
+}
+
+/* Form Layout (Flexbox-based) */
+.form-row {
+    /* margin-top: 100px; Removed margin-top for no large gap */
+    display: flex; /* Enables flexbox layout for this row */
+    flex-wrap: wrap; /* Allows items to wrap onto new lines if needed (responsive design) */
+    justify-content: space-between; /* Distributes space between the form elements */
+}
+
+/* Styling for Form Group (Input Containers) */
+.form-group {
+    flex-basis: calc(45% - 10px); /* Ensures each form group (input field) takes up about 45% of the row, with a 10px gap between them */
+    margin-bottom: 20px; /* Adds space below each form group */
+}
+
+/* Label Styling */
+label {
+    display: block; /* Ensures the label takes up the full width of the container, stacking above the input field */
+    margin-bottom: 8px; /* Adds 8px of space below the label */
+    font-weight: bold; /* Makes the label text bold */
+    color: #333; /* Sets the color of the label text to a dark grey (#333) */
+}
+
+/* Input, Textarea, and Select Field Styling */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%; /* Ensures these form elements take up 100% of the width of their parent container */
+    padding: 12px; /* Adds 12px of padding inside the form fields for better spacing */
+    border: 2px solid #ccc; /* Applies a light grey border around the fields */
+    border-radius: 10px; /* Rounds the corners of the form fields with a 10px radius */
+    transition: border-color 0.3s ease; /* Adds a smooth transition effect when the border color changes (e.g., when focused) */
+}
+
+
+/* Input fields and textarea focus styles */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #ff6b6b; /* Soft red on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button styling */
+button {
+    width: 100%; /* Full width button */
+    padding: 12px; /* Padding around button text */
+    background-color: #ff6b6b; /* Soft red background */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for background and scale */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #e55a5a; /* Darker red on hover */
+    transform: scale(1.02); /* Slightly enlarge button */
+}
+
+/* Footer note styling */
+.footer-note {
+    text-align: center; /* Center the footer text */
+    margin-top: 20px; /* Margin above the footer */
+    font-size: 14px; /* Smaller font size */
+    color: #777; /* Medium grey color for footer note */
+}
+
+/* Media query for small screens (max-width: 600px) */
+@media (max-width: 600px) {
+    .form-group {
+        flex-basis: 100%; /* Stack form fields on small screens */
+    }
+    .form-row {
+        flex-direction: column; /* Stack form rows vertically */
+    }
+}
+
+/* About Us section styling */
+.about-us {
+    max-width: 800px; /* Max width for the section */
+    margin-top: 170px; /* Margin from the top */
+    margin-bottom: 80px; /* Margin from the bottom */
+    margin-left: auto; /* Center align horizontally */
+    margin-right: auto; /* Center align horizontally */
+    padding: 20px; /* Padding inside the section */
+    background-color: white; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+}
+
+/* Heading inside About Us */
+.about-us h2 {
+    color: #ff6b6b; /* Soft red for headings */
+    text-align: center; /* Center the heading */
+}
+
+/* Paragraphs inside About Us */
+.about-us p {
+    line-height: 1.6; /* Increase line height for readability */
+    color: #333; /* Dark grey text color */
+}
+
+/* FAQ container styles */
+.faq-container {
+    max-width: 800px; /* Max width for the FAQ section */
+    margin: auto; /* Center align the FAQ container */
+    background-color: white; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    padding: 20px; /* Padding inside the container */
+}
+
+/* Additional margin for FAQ container */
+.faq-container {
+    margin-top: 170px;
+    margin-bottom: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styling for each FAQ item */
+details {
+    border-bottom: 1px solid #ddd; /* Border between FAQ items */
+    margin-bottom: 10px; /* Margin below each FAQ item */
+}
+
+/* Summary (question) in the FAQ */
+summary {
+    cursor: pointer; /* Pointer cursor on hover */
+    color: black; /* Black color for the text */
+    font-size: 1.2em; /* Larger text size */
+    padding: 10px 0; /* Padding on top and bottom */
+}
+
+/* Hover effect on FAQ question */
+summary:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: brown; /* Change color on hover */
+}
+
+/* Paragraph inside FAQ */
+p {
+    padding-left: 15px; /* Left padding for paragraphs */
+    margin: 10px 0; /* Margin on top and bottom */
+}
+
+/* Privacy Policy container styles */
+.policy-container {
+    max-width: 800px; /* Max width for the policy section */
+    margin-top: 170px; /* Margin from the top */
+    margin-bottom: 80px; /* Margin from the bottom */
+    margin-left: auto; /* Center align horizontally */
+    margin-right: auto; /* Center align horizontally */
+    background-color: white; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    padding: 20px; /* Padding inside the section */
+}
+
+/* Heading inside Policy */
+h2 {
+    color: #ff6b6b; /* Soft red for headings */
+    margin-top: 20px; /* Margin from the top */
+    text-align: center; /* Center align the heading */
+}
+
+/* Paragraph inside Policy */
+p {
+    line-height: 1.6; /* Increase line height for readability */
+}
+
+/* List inside Policy */
+ul {
+    margin-left: 20px; /* Left margin for lists */
+}
+
+/* Styling for types of content (used for aligning elements) */
+.types {
+    margin-bottom: 10px; /* Margin at the bottom */
+    display: inline; /* Display inline */
+    margin-right: 130px; /* Margin to the right */
+    margin-left: 100px; /* Margin to the left */
+}
+
+/* Styling for links */
+a {
+    color: #ff6b6b; /* Soft red color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* List of links section */
+.list {
+    margin-top: 120px; /* Margin from the top */
+    margin-bottom: auto; /* Auto margin at the bottom */
+    margin-left: auto; /* Center align horizontally */
+    margin-right: auto; /* Center align horizontally */
+    background-color: #2d3436; /* Dark background for list */
+    list-style-type: none; /* Remove default list styling */
+    display: flex; /* Display list items horizontally */
+}
+
+/* Media query for small screens (max-width: 600px) */
+@media(max-width: 600px){
+    .list a {
+        font-size: 1.2em; /* Increase font size for small screens */
+    }
+}
+
+/* Personalized Hero section */
+.personalized-hero {
+    text-align: center; /* Center align text */
+    padding: 50px 20px; /* Padding inside the hero section */
+    color: white; /* White text color */
+    background-color: #2d3436; /* Dark background color */
+    margin-top: 100px; /* Margin from the top */
+    margin-bottom: 80px; /* Margin from the bottom */
+    margin-left: auto; /* Center align horizontally */
+    margin-right: auto; /* Center align horizontally */
+}
+
+/* Personalization options section */
+.personalization-options {
+    padding: 20px; /* Padding inside the section */
+}
+
+/* Grid for personalization options */
+.personalization-grid {
+    display: flex; /* Use flex layout for the grid */
+    justify-content: center; /* Center the grid items */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+/* Card inside personalization grid */
+.personalization-card {
+    text-align: center; /* Center the text inside the card */
+    margin: 10px; /* Margin around each card */
+    padding: 20px; /* Padding inside the card */
+    border: 1px solid #ddd; /* Border around the card */
+    border-radius: 8px; /* Rounded corners */
+    width: 200px; /* Fixed width for each card */
+}
+
+/* Personalized products section */
+.personalized-products {
+    padding: 20px; /* Padding inside the section */
+}
+
+/* Heading inside Personalized products */
+.personalized-products h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 30px; /* Margin below the heading */
+}
+
+/* Styling for product grid within personalized products section */
+.personalized-products .product-grid {
+    display: flex; /* Use flexbox to align product cards */
+    flex-wrap: wrap; /* Allow product cards to wrap to the next line */
+    justify-content: space-between; /* Distribute space evenly between cards */
+    gap: 20px; /* Add spacing between product cards */
+}
+
+/* Styling for each individual product card */
+.personalized-products .product-card {
+    border: 1px solid #ff6b6b; /* Border with soft red color */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Padding inside the card */
+    width: calc(33.33% - 20px); /* Set card width to 33.33% of container with gap space adjustment */
+    text-align: center; /* Center the text inside the card */
+    display: flex; /* Use flexbox to align content */
+    flex-direction: column; /* Arrange content in a column layout */
+    height: 400px; /* Set a fixed height for the card */
+    transition: all 0.5s ease-in-out; /* Smooth transition for hover effects */
+    position: relative; /* Position relative for button styling */
+    overflow: hidden; /* Hide content that overflows the card */
+}
+
+/* Hover effect for product card */
+.personalized-products .product-card:hover {
+    transform: translateY(-5px); /* Slight upward movement on hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Add shadow for hover effect */
+}
+
+/* Styling for the product image */
+.personalized-products .product-card img {
+    width: 100%; /* Make image span the entire width of the card */
+    height: 250px; /* Fixed height for the image */
+    object-fit: cover; /* Ensure the image covers the entire area without distortion */
+    object-position: center; /* Center the image */
+    margin-bottom: 10px; /* Space between image and text */
+    border-radius: 8px; /* Rounded corners for the image */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for scaling on hover */
+}
+
+/* Hover effect on product image (scaling) */
+.personalized-products .product-card:hover img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Styling for the product title (h3) */
+.personalized-products .product-card h3 {
+    font-size: 18px; /* Font size for the title */
+    margin-bottom: 10px; /* Margin below the title */
+    flex-grow: 1; /* Allow title to take up available space in the card */
+    transition: color 0.5s ease-in-out; /* Smooth color transition */
+}
+
+/* Hover effect for product title */
+.personalized-products .product-card:hover h3 {
+    color: #ff6b6b; /* Change color to soft red on hover */
+}
+
+/* Styling for the product description (p) */
+.personalized-products .product-card p {
+    font-size: 16px; /* Font size for description */
+    margin-bottom: 10px; /* Margin below the description */
+    transition: color 0.5s ease-in-out; /* Smooth color transition */
+}
+
+/* Hover effect for product description */
+.personalized-products .product-card:hover p {
+    color: #ff6b6b; /* Change color to soft red on hover */
+}
+
+/* Button styling inside the product card */
+.personalized-products .product-card button {
+    background-color: #28a745; /* Green background for the button */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding inside the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: calc(100% + 30px); /* Make button slightly wider than the card */
+    margin-top: auto; /* Push button to the bottom of the card */
+    margin-left: -15px; /* Adjust button alignment */
+    margin-bottom: -15px; /* Adjust button alignment */
+    transition: all 0.5s ease-in-out; /* Smooth transition for hover effects */
+    position: relative; /* Position relative for the pseudo-element */
+    z-index: 1; /* Ensure button is on top of other content */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+/* Button background transition effect */
+.personalized-products .product-card button::before {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute; /* Position absolutely within the button */
+    top: 0; /* Position at the top of the button */
+    left: -100%; /* Start the background off-screen */
+    width: 100%; /* Full width of the button */
+    height: 100%; /* Full height of the button */
+    background-color: #218838; /* Darker green background color */
+    transition: all 0.5s ease-in-out; /* Smooth transition for hover effect */
+    z-index: -1; /* Place the background behind the button text */
+}
+
+/* Button hover effect for the pseudo-element */
+.personalized-products .product-card button:hover::before {
+    left: 0; /* Move the background to the left when hovered */
+}
+
+/* Button hover effect for text color */
+.personalized-products .product-card button:hover {
+    color: white; /* Ensure text remains white on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    /* Change product card width to 50% on smaller screens */
+    .personalized-products .product-card {
+        width: calc(50% - 20px); /* Adjust width to 50% minus the gap */
+    }
+}
+
+/* Responsive adjustments for very small screens (mobile devices) */
+@media (max-width: 480px) {
+    /* Set product card width to 100% on very small screens */
+    .personalized-products .product-card {
+        width: 100%;
+    }
+}
+
+/* Personalization Tool Section */
+.personalization-tool {
+    max-width: 800px; /* Limit the width of the tool */
+    margin: 50px auto; /* Center the tool with margin */
+    padding: 30px; /* Padding inside the container */
+    background: #ffffff; /* White background */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Heading for the personalization tool */
+.personalization-tool h2 {
+    text-align: center; /* Center the heading */
+    color: #ff6b6b; /* Soft red color */
+    margin-bottom: 30px; /* Space below the heading */
+}
+
+/* Preview area styling with dashed border */
+.preview-area {
+    border: 2px dashed #ff6b6b; /* Dashed red border */
+    border-radius: 10px; /* Rounded corners */
+    min-height: 300px; /* Minimum height for the preview area */
+    display: flex; /* Flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text */
+    background-color: #f9f9f9; /* Light grey background */
+    margin-bottom: 20px; /* Space below the preview area */
+}
+
+/* Styling for the text inside the preview area */
+.preview-area p {
+    color: #888; /* Grey color for text */
+    font-style: italic; /* Italicized text */
+}
+
+/* Input fields for text and file */
+input[type="text"], input[type="file"] {
+    width: calc(100% - 22px); /* Full width minus padding */
+    padding: 10px; /* Padding inside the inputs */
+    margin-top: 10px; /* Space above the input fields */
+}
+
+/* Color picker section styling */
+.color-picker {
+    display: flex; /* Use flexbox to align color swatches */
+    justify-content: center; /* Center the swatches horizontally */
+    margin-top: 10px; /* Space above the color picker */
+}
+
+/* Styling for individual color swatches */
+.color-swatch {
+    width: 30px; /* Fixed width for swatches */
+    height: 30px; /* Fixed height for swatches */
+    margin-right: 5px; /* Space between swatches */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Cart container styling */
+.cart-container {
+    margin: 2rem auto; /* Center the cart container */
+    background-color: white; /* White background */
+    padding: 2rem; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+/* Cart header styling */
+.cart-header {
+    margin-top: 50px; /* Space above the header */
+    display: flex; /* Flexbox to align header content */
+    justify-content: space-between; /* Space between title and other elements */
+    align-items: center; /* Vertically align items */
+    border-bottom: 2px solid #f1f1f1; /* Light grey border under header */
+    padding-bottom: 1rem; /* Padding at the bottom */
+    margin-bottom: 1rem; /* Margin below the header */
+}
+
+/* Cart header title */
+.cart-header h2 {
+    color: #ff6b6b; /* Soft red color for the title */
+}
+
+/* Styling for each cart item */
+.cart-item {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Vertically align the content */
+    justify-content: space-between; /* Space between image, details, and buttons */
+    border-bottom: 1px solid #f1f1f1; /* Light grey border between items */
+    padding: 1rem 0; /* Padding on top and bottom */
+}
+
+/* Styling for cart item image */
+.cart-item img {
+    width: 100px; /* Fixed width for the image */
+    height: 100px; /* Fixed height for the image */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-radius: 8px; /* Rounded corners */
+    margin-right: 1rem; /* Space between the image and item details */
+}
+
+/* Styling for the item details section */
+.item-details {
+    flex-grow: 1; /* Allow the item details to take available space */
+}
+
+/* Styling for quantity controls in the cart */
+.item-quantity {
+    display: flex; /* Flexbox layout for buttons */
+    align-items: center; /* Vertically align quantity controls */
+}
+
+/* Styling for quantity increase/decrease buttons */
+.quantity-btn {
+    background-color: #333; /* Dark background for buttons */
+    border: none; /* No border */
+    padding: 5px 10px; /* Padding inside buttons */
+    margin: 0 10px; /* Space between buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect for quantity buttons */
+.quantity-btn:hover {
+    background-color: #ff6b6b; /* Soft red background on hover */
+    color: white; /* White text color on hover */
+}
+
+/* Cart summary section at the bottom */
+.cart-summary {
+    display: flex; /* Flexbox layout for the summary */
+    justify-content: space-between; /* Space between summary items */
+    margin-top: 2rem; /* Space above the summary */
+    padding-top: 1rem; /* Padding at the top */
+    border-top: 2px solid #f1f1f1; /* Border at the top */
+}
+
+/* Checkout button styling */
+.checkout-btn {
+    background-color: #ff6b6b; /* Soft red background for button */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 12px 24px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect for checkout button */
+.checkout-btn:hover {
+    background-color: #ff4949; /* Darker red on hover */
+}
+
+/* Login and Signup Container */
+.login-container {
+    display: flex; /* Flexbox layout to center login form */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: calc(100vh - 250px); /* Full height minus some space */
+    padding: 2rem 0; /* Padding on top and bottom */
+}
+
+/* Login form container */
+.login-form {
+    margin-top: 100px; /* Space above the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow for form */
+    width: 100%; /* Full width */
+    max-width: 400px; /* Maximum width */
+    padding: 2rem; /* Padding inside the form */
+}
+
+/* Login form heading */
+.login-form h2 {
+    text-align: center; /* Center the heading */
+    color: var(--text-color); /* Use a custom text color */
+    margin-bottom: 1.5rem; /* Space below the heading */
+}
+
+/* Styling for form groups (label and input) */
+.form-group {
+    margin-bottom: 1rem; /* Margin between form groups */
+}
+
+/* Styling for labels in the form */
+.form-group label {
+    display: block; /* Block-level label */
+    margin-bottom: 0.5rem; /* Space below label */
+    color: var(--text-color); /* Custom text color */
+}
+
+/* Styling for form input fields */
+.form-group input {
+    width: 100%; /* Full width input fields */
+    padding: 0.75rem; /* Padding inside the input */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+}
+
+/* Login button styling */
+.login-button {
+    width: 100%; /* Full width button */
+    padding: 0.75rem; /* Padding inside the button */
+    background-color: var(--primary-color); /* Primary color for the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect for login button */
+.login-button:hover {
+    background-color: #ff5252; /* Darker red on hover */
+}
+
+/* Footer for form (links and additional options) */
+.form-footer {
+    text-align: center; /* Center the footer */
+    margin-top: 1rem; /* Space above the footer */
+}
+
+/* Styling for links in the footer */
+.forgot-password, .signup-link, .login-link {
+    color: var(--primary-color);
+    text-decoration : none;
+}
+/* Hover effect for password,sign up,login. */
+.forgot-password:hover, .signup-link:hover, .login-link:hover {
+    text-decoration: underline;
+}

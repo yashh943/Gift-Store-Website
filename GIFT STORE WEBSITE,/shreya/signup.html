@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the webpage (displayed on the browser tab) -->
+    <title>Sign Up</title>
+    
+    <!-- Link to external CSS stylesheet for styling the page -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Link to Font Awesome for using icons like cart and user -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon for the website (icon displayed on the browser tab) -->
+    <link rel="icon" href="giftCraft-Logo.png" type="image/png">
+</head>
+<body>
+    <!-- Header section containing the logo, navigation links, and user icons -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <!-- Logo image and website name -->
+                <img src="giftCraft-Logo.png" alt="GiftCraft">
+                <h1>GiftCraft</h1>
+            </div>
+            <div class="nav-links">
+                <!-- Navigation links for the website -->
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="index.html#Categories">Categories</a>
+                <a href="custom.html">Custom Gifts</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-icons">
+                <!-- Icons for the shopping cart and login page -->
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                <a href="login.html"><i class="fas fa-user"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content section for the sign-up form -->
+    <main class="login-container">
+        <div class="login-form signup-form">
+            <h2>Create Your GiftCraft Account</h2>
+            
+            <!-- Sign-up form -->
+            <form action="#" method="post">
+                <!-- Full name input field -->
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                
+                <!-- Email address input field -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <!-- Password input field -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <!-- Confirm password input field -->
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                
+                <!-- Submit button for the sign-up form -->
+                <button type="submit" class="login-button">Sign Up</button>
+                
+                <!-- Footer section of the form with a link to login page if the user already has an account -->
+                <div class="form-footer">
+                    <p>Already have an account? <a href="login.html" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer section with important information and contact details -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your premier destination for unique and thoughtful gifts.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <!-- Quick links to other important pages -->
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="returns.html">Returns Policy</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <!-- Contact information including email and phone -->
+                <p>Email: info@giftcraft.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the page -->
+    <title>Cart</title>
+    
+    <!-- Link to external CSS stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon for the website -->
+    <link rel="icon" href="giftCraft-Logo.png" type="image/png">
+</head>
+<body>
+    <!-- Header section containing navigation bar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <!-- Logo and site name -->
+                <img src="giftCraft-Logo.png" alt="GiftCraft">
+                <h1>GiftCraft</h1>
+            </div>
+            <div class="nav-links">
+                <!-- Navigation links -->
+                <a href="index.html" class="active">Home</a>
+                <a href="products.html">Products</a>
+                <a href="index.html#Categories">Categories</a>
+                <a href="custom.html">Custom Gifts</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-icons">
+                <!-- Icons for cart and user login -->
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                <a href="login.html"><i class="fas fa-user"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content area for the shopping cart -->
+    <div class="cart-container">
+        <!-- Header for the cart section -->
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <span>3 Items</span> <!-- Placeholder for item count -->
+        </div>
+
+        <!-- Individual cart item 1 -->
+        <div class="cart-item">
+            <img src="photoFrame.jpeg" alt="Customized Photo Frame">
+            <div class="item-details">
+                <h3>Customized Photo Frame</h3>
+                <p>Personalized Design</p>
+                <p>$29.99</p> <!-- Price of the item -->
+            </div>
+            <div class="item-quantity">
+                <!-- Quantity adjustment buttons -->
+                <button class="quantity-btn">-</button>
+                <span>1</span> <!-- Current quantity -->
+                <button class="quantity-btn">+</button>
+            </div>
+            <strong>$29.99</strong> <!-- Total price for this item -->
+        </div>
+
+        <!-- Individual cart item 2 -->
+        <div class="cart-item">
+            <img src="personalised jwellery box.webp" alt="Personalized Jewelry Box">
+            <div class="item-details">
+                <h3>Personalized Jewelry Box</h3>
+                <p>Elegant Design</p>
+                <p>$39.99</p> <!-- Price of the item -->
+            </div>
+            <div class="item-quantity">
+                <!-- Quantity adjustment buttons -->
+                <button class="quantity-btn">-</button>
+                <span>1</span> <!-- Current quantity -->
+                <button class="quantity-btn">+</button>
+            </div>
+            <strong>$39.99</strong> <!-- Total price for this item -->
+        </div>
+
+        <!-- Individual cart item 3 -->
+        <div class="cart-item">
+            <img src="resin art gift.avif" alt="Resin Art Gifts">
+            <div class="item-details">
+                <h3>Resin Art Gifts</h3>
+                <p>Unique Handmade Gift</p>
+                <p>$39.99</p> <!-- Price of the item -->
+            </div>
+            <div class="item-quantity">
+                <!-- Quantity adjustment buttons -->
+                <button class="quantity-btn">-</button>
+                <span>1</span> <!-- Current quantity -->
+                <button class="quantity-btn">+</button>
+            </div>
+            <strong>$39.99</strong> <!-- Total price for this item -->
+        </div>
+
+        <!-- Summary section for totals -->
+        <div class="cart-summary">
+            <div>
+                <!-- Labels for summary items -->
+                <p>Subtotal</p>
+                <p>Tax</p>
+                <p><strong>Total</strong></p>
+            </div>
+            <div style="text-align: right;">
+                <!-- Summary values (placeholders) -->
+                <p>$109.97</p> 
+                <p>$8.80</p> 
+                <p><strong>$118.77</strong></p> 
+            </div>
+        </div>
+
+        <!-- Checkout button section -->
+        <div style="text-align: right; margin-top: 1rem;">
+            <button class="checkout-btn">Proceed to Checkout</button> 
+        </div>
+    </div>
+
+    <!-- Footer section with additional information -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Section about the company -->
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your premier destination for unique and thoughtful gifts.</p>
+            </div>
+
+            <!-- Quick links section for easy navigation -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="returns.html">Returns Policy</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact information section -->
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@giftcraft.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript to handle cart functionality -->
+     <script src="script.js"></script>
+
+</body>
+</html>
