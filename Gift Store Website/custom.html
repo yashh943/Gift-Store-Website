@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the webpage -->
+    <title>Personalized Gifts</title>
+    
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Link to Font Awesome icons for the site -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon (icon that appears on the browser tab) -->
+    <link rel="icon" href="giftCraft-Logo.png" type="image/png">
+</head>
+<body>
+    <!-- Header section containing the logo, navigation menu, and user icons -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <!-- Logo image and site title -->
+                <img src="giftCraft-Logo.png" alt="GiftCraft">
+                <h1>GiftCraft</h1>
+            </div>
+            <div class="nav-links">
+                <!-- Navigation links for different sections/pages of the site -->
+                <a href="index.html" class="active">Home</a>
+                <a href="products.html">Products</a>
+                <a href="index.html#Categories">Categories</a>
+                <a href="custom.html">Custom Gifts</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-icons">
+                <!-- Icons for shopping cart and user login -->
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                <a href="login.html"><i class="fas fa-user"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero section where users can see the main message for personalized gifts -->
+        <section class="personalized-hero">
+            <h2>Create Unique Personalized Gifts</h2>
+            <p>Make every gift special and memorable</p>
+        </section>
+
+        <!-- Personalization options section where users can customize gifts -->
+        <section class="personalization-options">
+            <div class="personalization-grid">
+                <!-- Personalization card for adding text -->
+                <div class="personalization-card">
+                    <i class="fas fa-font"></i>
+                    <h3>Add Text</h3>
+                    <p>Customize with names, dates, or messages</p>
+                    <input type="text" placeholder="Enter your text here">
+                </div>
+
+                <!-- Personalization card for uploading photos -->
+                <div class="personalization-card">
+                    <i class="fas fa-image"></i>
+                    <h3>Upload Photos</h3>
+                    <p>Create gifts with your favorite memories</p>
+                    <input type="file" accept="image/*,application/pdf" placeholder="Upload document or photo">
+                </div>
+
+                <!-- Personalization card for choosing colors -->
+                <div class="personalization-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>Choose Colors</h3>
+                    <p>Personalize your gift's appearance</p>
+                    <div class="color-picker">
+                        <!-- Color swatches for selecting colors -->
+                        <div class="color-swatch" style="background-color:#ff6b6b;" title="#ff6b6b"></div>
+                        <div class="color-swatch" style="background-color:#6bff6b;" title="#6bff6b"></div>
+                        <div class="color-swatch" style="background-color:#6b6bff;" title="#6b6bff"></div>
+                        <div class="color-swatch" style="background-color:#ffff6b;" title="#ffff6b"></div>
+                        <div class="color-swatch" style="background-color:#ff6bbf;" title="#ff6bbf"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Submit button for the personalization form -->
+            <button type="submit">Submit</button>
+        </section>
+
+        <!-- Section showcasing trending personalized products -->
+        <section class="personalized-products">
+            <h2>Trending Personalized Gifts</h2>
+            <div class="product-grid">
+                <!-- Product card for the custom photo album -->
+                <div class="product-card">
+                    <img src="photo album.jpg" alt="Personalized Photo Album" style="width:100%; border-radius: 8px;">
+                    <h3>Custom Photo Album</h3>
+                    <p>$59.99</p>
+                    <button>Start Customization</button>
+                </div>
+
+                <!-- Product card for the custom coffee mug -->
+                <div class="product-card">
+                    <img src="mug.webp" alt="Custom Mug" style="width:100%; border-radius: 8px;">
+                    <h3>Custom Coffee Mug</h3>
+                    <p>$19.99</p>
+                    <button>Start Customization</button>
+                </div>
+
+                <!-- Product card for the engraved keychain -->
+                <div class="product-card">
+                    <img src="engraved key chain.avif" alt="Engraved Keychain" style="width:100%; border-radius: 8px;">
+                    <h3>Engraved Keychain</h3>
+                    <p>$14.99</p>
+                    <button>Start Customization</button>
+                </div>
+
+                <!-- More product cards can be added here -->
+            </div>
+        </section>
+
+        <!-- Section for designing custom gifts -->
+        <section class="personalization-tool">
+            <h2>Design Your Gift</h2>
+            <div class="customization-interface">
+                <!-- Preview area for the customized gift -->
+                <div class="preview-area">
+                    <p>Your custom gift preview will appear here</p>
+                </div>
+
+                <!-- Placeholder for more customization options (e.g., text, images, color) -->
+                <!-- Additional customization controls could be placed here -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer section with important links and contact info -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your premier destination for unique and thoughtful gifts.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="returns.html">Returns Policy</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@giftcraft.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

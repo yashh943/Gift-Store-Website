@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">r̥
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the webpage -->
+    <title>GiftCraft - Your Premium Gift Store</title>
+    
+    <!-- Link to external CSS stylesheet for page styling -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Link to Font Awesome for icons (used for cart, user, and star ratings) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon for the website (icon displayed on browser tab) -->
+    <link rel="icon" href="giftCraft-Logo.png" type="image/png">
+</head>
+<body>
+    <!-- Header section containing logo, navigation menu, and user icons -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <!-- Logo image and website name -->
+                <img src="giftCraft-Logo.png" alt="GiftCraft">
+                <h1>GiftCraft</h1>
+            </div>
+            <div class="nav-links">
+                <!-- Navigation links for the website -->
+                <a href="index.html" class="active">Home</a>
+                <a href="products.html">Products</a>
+                <a href="#Categories">Categories</a>
+                <a href="custom.html">Custom Gifts</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-icons">
+                <!-- Icons for shopping cart and user login -->
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                <a href="login.html"><i class="fas fa-user"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content section -->
+    <main>
+        <!-- Hero section with a call to action (CTA) -->
+        <section class="hero">
+            <div class="hero-content">
+                <!-- Main heading and description for the hero section -->
+                <h2 style="font-size: 400%;">Find the Perfect Gift</h2>
+                <p>Discover unique and personalized gifts for every occasion</p>
+                <!-- CTA button to navigate to products page -->
+                <a href="products.html" class="cta-button">Shop Now</a>
+            </div>
+        </section>
+
+        <!-- Featured Categories section -->
+        <section class="featured-categories" id="Categories">
+            <h2>Popular Categories</h2>
+            <div class="category-grid">
+                <!-- Category cards for each popular gift category -->
+                <div class="category-card">
+                    <img src="birthdayGifts.jpeg" alt="Birthday Gifts">
+                    <h3><a href="products.html#birthday">Birthday Gifts</a></h3>
+                </div>
+                <div class="category-card">
+                    <img src="anniversaryGifts.jpeg" alt="Anniversary Gifts">
+                    <h3><a href="products.html#anniversary">Anniversary Gifts</a></h3>
+                </div>
+                <div class="category-card">
+                    <img src="wedding.jpeg" alt="Wedding Gifts">
+                    <h3><a href="products.html#Wedding">Wedding Gifts</a></h3>
+                </div>
+                <div class="category-card">
+                    <img src="corporate.jpeg" alt="Corporate Gifts">
+                    <h3><a href="products.html#corporate">Corporate Gifts</a></h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products section with product cards -->
+        <section class="featured-products">
+            <h2>Trending Gifts</h2>
+            <div class="product-slider-container">
+                <div class="product-slider">
+                    <!-- Individual product card -->
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="product-image">
+                            <!-- Product image and quick view button -->
+                            <img src="photoFrame.jpeg" alt="Customized Photo Frame">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <!-- Product title, rating, price, and add to cart button -->
+                            <h3>Customized Photo Frame</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="product-price">$29.99</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Another product card for a best-seller product -->
+                    <div class="product-card">
+                        <div class="product-badge">Best Seller</div>
+                        <div class="product-image">
+                            <img src="personalised jwellery box.webp" alt="Personalized Jewelry Box">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Personalized Jewelry Box</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="product-price">$39.99</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- A product card with a "Favorite" badge -->
+                    <div class="product-card">
+                        <div class="product-badge">Favorite</div>
+                        <div class="product-image">
+                            <img src="resin art gift.avif" alt="Resin Art Gifts">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Resin Art Gifts</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="product-price">$39.99</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- More product cards can be added here using the same structure -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer section with important links and contact details -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your premier destination for unique and thoughtful gifts.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="returns.html">Returns Policy</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@giftcraft.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

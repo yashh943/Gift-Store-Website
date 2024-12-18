@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the webpage (displayed on the browser tab) -->
+    <title>Login</title>
+    
+    <!-- Link to external CSS stylesheet for page styling -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Link to Font Awesome for icons (used for cart, user, etc.) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon for the website (icon displayed on browser tab) -->
+    <link rel="icon" href="giftCraft-Logo.png" type="image/png">
+</head>
+<body>
+    <!-- Header section containing logo, navigation menu, and user icons -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <!-- Logo image and website name -->
+                <img src="giftCraft-Logo.png" alt="GiftCraft">
+                <h1>GiftCraft</h1>
+            </div>
+            <div class="nav-links">
+                <!-- Navigation links for the website -->
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="index.html#Categories">Categories</a>
+                <a href="custom.html">Custom Gifts</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-icons">
+                <!-- Icons for shopping cart and login (active link will be highlighted) -->
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                <a href="login.html"><i class="fas fa-user"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content section for login form -->
+    <main class="login-container">
+        <div class="login-form">
+            <!-- Heading for the login section -->
+            <h2>Login to GiftCraft</h2>
+            <!-- Form to accept email and password for login -->
+            <form action="#" method="post">
+                <!-- Email input field -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <!-- Password input field -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <!-- Login button -->
+                <button type="submit" class="login-button">Login</button>
+                <!-- Footer links below the form -->
+                <div class="form-footer">
+                    <!-- Link to reset password -->
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                    <!-- Link to sign-up page for new users -->
+                    <p>Don't have an account? <a href="signup.html" class="signup-link">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer section with important links and contact details -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your premier destination for unique and thoughtful gifts.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <!-- Quick links to other important pages -->
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="returns.html">Returns Policy</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <!-- Contact information including email and phone -->
+                <p>Email: info@giftcraft.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

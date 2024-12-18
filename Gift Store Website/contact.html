@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the page -->
+    <title>Contact Us</title>
+    
+    <!-- Link to external CSS stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon for the website -->
+    <link rel="icon" href="giftCraft-Logo.png" type="image/png">
+</head>
+<body>
+    <!-- Header section containing navigation bar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <!-- Logo and site name -->
+                <img src="giftCraft-Logo.png" alt="GiftCraft">
+                <h1>GiftCraft</h1>
+            </div>
+            <div class="nav-links">
+                <!-- Navigation links -->
+                <a href="index.html" class="active">Home</a>
+                <a href="products.html">Products</a>
+                <a href="index.html#Categories">Categories</a>
+                <a href="custom.html">Custom Gifts</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-icons">
+                <!-- Icons for cart and user login -->
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                <a href="login.html"><i class="fas fa-user"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Container for the contact form -->
+    <div class="container">
+        <form action="#" method="post" class="contact-form">
+            <!-- Form row for name and email inputs -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Name:</label> <!-- Label for name input -->
+                    <input type="text" id="name" name="name" required placeholder="Your Name"> <!-- Name input field -->
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label> <!-- Label for email input -->
+                    <input type="email" id="email" name="email" required placeholder="Your Email"> <!-- Email input field -->
+                </div>
+             </div>
+
+             <!-- Form row for subject and phone inputs -->
+             <div class="form-row">
+                <div class="form-group">
+                    <label for="subject">Subject:</label> <!-- Label for subject dropdown -->
+                    <select id="subject" name="subject" required> <!-- Subject selection dropdown -->
+                        <option value="">Select a Subject</option> <!-- Default option -->
+                        <option value="general">General Inquiry</option> 
+                        <option value="support">Support</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="recustomize the product">Recustomize the Product</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone:</label> <!-- Label for phone input -->
+                    <input type="text" id="phone" name="phone" placeholder="Your Phone Number"> <!-- Phone input field (optional) -->
+                </div>
+             </div>
+
+             <!-- Message input area -->
+             <div class="form-group">
+                 <label for="message">Message:</label> <!-- Label for message textarea -->
+                 <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea> <!-- Message textarea -->
+             </div>
+
+             <!-- Submit button for the form -->
+             <button type="submit">Send Message</button>
+
+             <!-- Note about feedback -->
+             <p class="footer-note">We value your feedback!</p>
+         </form>
+     </div>
+
+     <!-- Footer section with additional information -->
+     <footer class="footer">
+        <div class="footer-content">
+            <!-- Section about the company -->
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your premier destination for unique and thoughtful gifts.</p>
+            </div>
+
+            <!-- Quick links section for easy navigation -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="returns.html">Returns Policy</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact information section -->
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@giftcraft.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
